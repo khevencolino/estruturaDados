@@ -13,14 +13,19 @@ private:
     int dados[100];
 public:
     Lista();
+
     bool vazia();
+
     bool cheia();
+
     int tamanho();
+
     int posicao(int dado);
+
     bool insere(int pos, int dado);
+
     int remover(int pos);
 };
-
 
 
 #endif //LISTA_LISTA_H
