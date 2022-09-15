@@ -11,6 +11,7 @@
 class ListaEncadeada {
 public:
     ListaEncadeada();
+    int imprime();
     bool vazia() const;
     int tamanho() const;
     int elemento(int pos);

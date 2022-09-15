@@ -10,7 +10,7 @@ int main() {
     int opcao = -1, auxiliarUm, auxiliarDois;
     std::cout << "(1) Inserir" << std::endl;
     std::cout << "(2) Vazia" << std::endl;
-    std::cout << "(3) NULL" << std::endl;
+    std::cout << "(3) Imprime" << std::endl;
     std::cout << "(4) Tamanho" << std::endl;
     std::cout << "(5) Obter Posiçao" << std::endl;
     std::cout << "(6) Remover" << std::endl;
@@ -37,6 +37,7 @@ int main() {
                 std::cout << l.vazia();
                 break;
             case 3:
+                l.imprime();
                 break;
             case 4:
                 std::cout << "O tamanho eh: " << l.tamanho() << std::endl;

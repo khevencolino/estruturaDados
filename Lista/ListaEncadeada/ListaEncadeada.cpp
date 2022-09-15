@@ -2,6 +2,7 @@
 // Created by Kheven on 13/09/2022.
 //
 
+#include <iostream>
 #include "ListaEncadeada.h"
 
 ListaEncadeada::ListaEncadeada() {
@@ -157,4 +158,24 @@ int ListaEncadeada::removeLista(int pos) {
     // Remove o ponteiro
     delete(atual);
     return dado;
+}
+
+int ListaEncadeada::imprime() {
+    // Verifica se a lista é valida
+    if (vazia()){
+        std::cout << "Lista vazia!" << std::endl;
+        return -1;
+    }
+
+    // Imprime a lista
+    No *aux = cabeca;
+    std::cout << "------------- Lista atual ---------------" << std::endl;
+
+    // Percorre até o final da lista
+    while (aux != nullptr){
+        std::cout  << aux->getConteudo() << "  ";
+        aux = aux->getProximo();
+    }
+    std::cout << std::endl;
+    return 1;
 }
