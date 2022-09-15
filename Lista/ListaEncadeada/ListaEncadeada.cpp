@@ -74,10 +74,11 @@ bool ListaEncadeada::insereInicioLista(int dado) {
 }
 
 bool ListaEncadeada::insereFimLista(int dado) {
+    // Inicializa os auxiliares
     No *novoNo = new No();
     novoNo->setConteudo(dado);
 
-    // Procura o final da lista
+    // Percorre até o final da lista
     No *aux = cabeca;
     while (aux->getProximo() != nullptr){
         aux = aux->getProximo();
@@ -90,12 +91,14 @@ bool ListaEncadeada::insereFimLista(int dado) {
 }
 
 bool ListaEncadeada::insereMeioLista(int pos, int dado) {
+    // Inicializa os auxiliares
     int contador = 1;
     // Alocando memoria para No
     No *novoNo = new No();
     novoNo->setConteudo(dado);
 
     No *aux = cabeca;
+    // Percorre a lista
     while ((contador < pos-1) && (aux != nullptr)) {
         aux = aux->getProximo();
         contador++;
@@ -119,9 +122,11 @@ int ListaEncadeada::remove(int pos) {
 }
 
 int ListaEncadeada::removeInicioLista(int pos) {
+    // Inicializa os auxiliares
     No *aux = cabeca;
     int dado = aux->getConteudo();
 
+    // Remove item e atualiza a cabeça da lista
     cabeca = aux->getProximo();
     tamanhoLista--;
     delete(aux);
@@ -129,22 +134,27 @@ int ListaEncadeada::removeInicioLista(int pos) {
 }
 
 int ListaEncadeada::removeLista(int pos) {
+    // Inicializa os auxiliares
     No *atual = nullptr, *anterior = nullptr;
     int dado = -1, contador = 1;
 
     atual = cabeca;
+
+    // Percorre lista ate a posição desejada
     while ((contador < pos) && (atual != nullptr)){
         anterior = atual;
         atual = atual->getProximo();
         contador++;
     }
 
+    // Verifica se a posicao escolhida é valida para remoção
     if (atual == nullptr) { return -1;}
 
     dado = atual->getConteudo();
     anterior->setProximo(atual->getProximo());
     tamanhoLista--;
 
+    // Remove o ponteiro
     delete(atual);
     return dado;
 }

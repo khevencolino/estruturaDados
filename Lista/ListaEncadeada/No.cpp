@@ -8,6 +8,7 @@ No::No() {
     proximo = nullptr; // Ponteiro normalmente aponta para o nulo, usando nullptr segundo C++11
 }
 
+// Get Set
 int No::getConteudo() const {
     return conteudo;
 }

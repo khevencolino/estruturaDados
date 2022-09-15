@@ -16,6 +16,7 @@ private:
     int conteudo; // Armazena o dado do No
     No *proximo; //  Ponteiro para o proximo No na lista
 public:
+    // Get Set
     int getConteudo() const;
 
     void setConteudo(int conteudo);

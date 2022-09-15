@@ -4,7 +4,7 @@
 
 #ifndef ESTRUTURADADOS_LISTAENCADEADA_H
 #define ESTRUTURADADOS_LISTAENCADEADA_H
-// Inclui a classe No
+// Inclui a classe No para representar cada elemento da lista
 #include "No.h"
 
 
@@ -21,6 +21,7 @@ public:
 private:
     No *cabeca;
     int tamanhoLista;
+
 
     bool insereInicioLista(int dado);
 
